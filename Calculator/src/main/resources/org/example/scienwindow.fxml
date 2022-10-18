@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="scienWindow" onKeyPressed="#type" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ScienController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu text="Program">
+                    <items>
+                        <MenuItem fx:id="simpleCalc" onAction="#changeCalculator" text="Prosty" />
+                        <MenuItem fx:id="scientCalc" text="Naukowy" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#exit" text="Wyjdź" />
+                    </items>
+                </Menu>
+                <Menu text="Edycja">
+                    <items>
+                        <MenuItem onAction="#deleteLast" text="Cofnij" />
+                        <MenuItem onAction="#clearAll" text="Wykasuj" />
+                    </items>
+                </Menu>
+                <Menu text="Pomoc">
+                    <items>
+                        <MenuItem onAction="#aboutProgram" text="O programie" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <right>
+        <TextArea fx:id="operationsHistory" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <TextField fx:id="currentOperation" prefHeight="41.0" prefWidth="401.0" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <GridPane hgap="5" vgap="5" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button onAction="#pi" prefHeight="45.0" prefWidth="67.0" text="PI" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                        <Button onAction="#euler" prefHeight="45.0" prefWidth="67.0" text="E" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                        <Button onAction="#clearAll" prefHeight="45.0" prefWidth="67.0" text="CE" textFill="RED" GridPane.columnIndex="3" />
+                        <Button onAction="#clear" prefHeight="45.0" prefWidth="67.0" text="C" textFill="RED" GridPane.columnIndex="4" />
+                        <Button onAction="#backspace" prefHeight="45.0" prefWidth="140.0" text="backspace" textFill="RED" GridPane.columnIndex="5" GridPane.columnSpan="2" />
+
+                        <Button onAction="#square" prefHeight="45.0" prefWidth="67.0" text="x^2" GridPane.rowIndex="1" />
+                        <Button onAction="#root" prefHeight="45.0" prefWidth="67.0" text="x^-2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button onAction="#sin" prefHeight="45.0" prefWidth="67.0" text="sin" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button onAction="#cos" prefHeight="45.0" prefWidth="67.0" text="cos" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button onAction="#tg" prefHeight="45.0" prefWidth="67.0" text="tg" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+                        <Button onAction="#cube" prefHeight="45.0" prefWidth="67.0" text="x^3" GridPane.rowIndex="2" />
+                        <Button onAction="#cubeRoot" prefHeight="45.0" prefWidth="67.0" text="x^-3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button onAction="#arcsin" prefHeight="45.0" prefWidth="67.0" text="sin^-1" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button onAction="#arccos" prefHeight="45.0" prefWidth="67.0" text="cos^-1" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button onAction="#arctg" prefHeight="45.0" prefWidth="67.0" text="tg^-1" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Button onAction="#division" prefHeight="45.0" prefWidth="67.0" text="/" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Button onAction="#percent" prefHeight="45.0" prefWidth="67.0" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <Button onAction="#pow" prefHeight="45.0" prefWidth="67.0" text="x^y" GridPane.rowIndex="3" />
+                        <Button onAction="#yRoot" prefHeight="45.0" prefWidth="67.0" text="x^-y" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button onAction="#seven" prefHeight="45.0" prefWidth="67.0" text="7" textAlignment="CENTER" textFill="#1100ff" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button onAction="#eight" prefHeight="45.0" prefWidth="67.0" text="8" textFill="#1100ff" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button onAction="#nine" prefHeight="45.0" prefWidth="67.0" text="9" textFill="#1100ff" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <Button onAction="#multiplication" prefHeight="45.0" prefWidth="67.0" text="*" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Button onAction="#absValue" prefHeight="45.0" prefWidth="67.0" text="|x|" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+
+                        <Button onAction="#teenPow" prefHeight="45.0" prefWidth="67.0" text="10^x" GridPane.rowIndex="4" />
+                        <Button onAction="#twoPow" prefHeight="45.0" prefWidth="67.0" text="2^x" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button onAction="#four" prefHeight="45.0" prefWidth="67.0" text="4" textFill="#1100ff" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button onAction="#five" prefHeight="45.0" prefWidth="67.0" text="5" textFill="#1100ff" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Button onAction="#six" prefHeight="45.0" prefWidth="67.0" text="6" textFill="#1100ff" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <Button onAction="#minus" prefHeight="45.0" prefWidth="67.0" text="-" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <Button onAction="#modulo" prefHeight="45.0" prefWidth="67.0" text="modulo" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+
+                        <Button onAction="#log" prefHeight="45.0" prefWidth="67.0" text="log" GridPane.rowIndex="5" />
+                        <Button onAction="#one" prefHeight="45.0" prefWidth="67.0" text="1" textFill="#1100ff" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button onAction="#two" prefHeight="45.0" prefWidth="67.0" text="2" textFill="#1100ff" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Button onAction="#three" prefHeight="45.0" prefWidth="67.0" text="3" textFill="#1100ff" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <Button onAction="#plus" prefHeight="45.0" prefWidth="67.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <Button onAction="#exponential" prefHeight="45.0" prefWidth="67.0" text="exp" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                        <Button onAction="#ln" prefHeight="45.0" prefWidth="67.0" text="ln" GridPane.rowIndex="6" />
+                        <Button onAction="#reverseSymbol" prefHeight="45.0" prefWidth="67.0" text="+/-" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Button onAction="#zero" prefHeight="45.0" prefWidth="67.0" text="0" textFill="#1100ff" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Button onAction="#decimalSeparator" prefHeight="45.0" prefWidth="67.0" text="." GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <Button onAction="#equal" prefHeight="45.0" prefWidth="67.0" text="=" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                        <Button onAction="#factorial" prefHeight="45.0" prefWidth="67.0" text="n!" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
+

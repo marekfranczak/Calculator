@@ -115,7 +115,7 @@ fabric.properties
 .idea/**/azureSettings.xml
 /.idea
 *.iml
-/target
+/Calculator/target
 
 ### Java ###
 # Compiled class file

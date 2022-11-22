@@ -21,9 +21,9 @@
 ## General info
 Will be soon
 
-![Selecting a paired device](Pictures/calculator.jpg)
-![Servo control](Pictures/calculator1.jpg)
-![Servo control](Pictures/calculator2.jpg)
+![Simply mode of app](Pictures/calculator.jpg)
+![Scientific mode of app](Pictures/calculator1.jpg)
+![Info screen](Pictures/calculator2.jpg)
 
 ## License
 For open source projects, say how it is licensed.

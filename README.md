@@ -21,9 +21,9 @@
 ## General info
 Will be soon
 
-![Simply mode of app](Pictures/calculator.jpg)
-![Scientific mode of app](Pictures/calculator1.jpg)
-![Info screen](Pictures/calculator2.jpg)
+![Simply mode of app](Calculator/Pictures/calculator.jpg)
+![Scientific mode of app](Calculator/Pictures/calculator1.jpg)
+![Info screen](Calculator/Pictures/calculator2.jpg)
 
 ## License
 For open source projects, say how it is licensed.

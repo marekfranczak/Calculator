@@ -1,5 +1,11 @@
 package org.example;
 
+/**
+*@author Marek Frańczak
+*@version 1.0.0
+*An interface containing basic methods that develop a regular calculator into a scientific calculator.
+*/
+
 public interface AdditionalOptionInScienCalc {
 
     public void pow();

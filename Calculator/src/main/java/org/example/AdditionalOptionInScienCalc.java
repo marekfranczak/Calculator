@@ -1,10 +1,18 @@
 package org.example;
 
 /**
+<<<<<<< HEAD
  * Interface that provides mathematical operation in Scientific Calculator.
  * @author Marek Frańczak
  * @since 1.0.0
  */
+=======
+*@author Marek Frańczak
+*@version 1.0.0
+*An interface containing basic methods that develop a regular calculator into a scientific calculator.
+*/
+
+>>>>>>> 33b430124bad4bccbd2e72a0c693d0c6c53cb5ce
 public interface AdditionalOptionInScienCalc {
 
     /**
